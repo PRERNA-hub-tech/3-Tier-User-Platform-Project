@@ -33,7 +33,11 @@ jobs:
           name: gitleaks-report
           path: gitleaks-report.json
           if-no-files-found: warn
-
+  chekov-scan:
+    name: Checkov Scan
+    runs-on: ubuntu-latest
+    steps:
+      - 
 
 
 
