@@ -134,7 +134,7 @@ jobs:
           --output client-trivy-fs-report.json \
           --severity HIGH, CRITICAL \
           --ignore-undefined
-          --exit-code 0
+          --exit-code=0
 
       - name: Run Trivy FS Scan on Client(TABLE)
         run: |
@@ -184,7 +184,7 @@ jobs:
           --output sever-trivy-fs-report.json \
           --severity HIGH, CRITICAL \
           --ignore-undefined
-          --exit-code 0
+          --exit-code=0
 
       - name: Run Trivy FS Scan on Server(TABLE)
         run: |
