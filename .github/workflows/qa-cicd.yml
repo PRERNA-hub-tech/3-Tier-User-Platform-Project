@@ -139,7 +139,7 @@ jobs:
       - name: Run Trivy FS Scan on Client(TABLE)
         run: |
           trivy fs ./client \
-          --formst table \
+          --format table \
           --severity HIGH,CRITICAL  \
           --ignore-unfixed \
           --exit-code 0 > client-trivy-fs-report.txt
@@ -189,7 +189,7 @@ jobs:
       - name: Run Trivy FS Scan on Server(TABLE)
         run: |
           trivy fs ./server \
-          --formst table \
+          --format table \
           --severity HIGH,CRITICAL  \
           --ignore-unfixed \
           --exit-code 0 > server-trivy-fs-report.txt
