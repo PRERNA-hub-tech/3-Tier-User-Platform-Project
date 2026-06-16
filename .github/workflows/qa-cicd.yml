@@ -181,7 +181,7 @@ jobs:
         run: |
           trivy fs ./server \
           --format json \
-          --output sever-trivy-fs-report.json \
+          --output server-trivy-fs-report.json \
           --severity HIGH,CRITICAL \
           --ignore-unfixed \
           --exit-code 0
