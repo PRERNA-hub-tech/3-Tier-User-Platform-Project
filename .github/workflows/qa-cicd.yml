@@ -338,11 +338,11 @@ jobs:
 
       # Triggering SonarQube analysis as results of it are required by Quality Gate check.
       - name: SonarQube Scan
-        if: ${{ secrets.RUN_SONAR == 'true' }}   # <-- removes the whole job when false
-        uses: sonarsource/sonarqube-scan-action@master
+        if: ${{ secrets.RUN_SONAR == 'true' }}
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+       uses: sonarsource/sonarqube-scan-action@master
 
       # Check the Quality Gate status.
       - name: SonarQube Quality Gate check
