@@ -1,0 +1,62 @@
+ # .dockerignore – root of the repo
+
+  # ---- Node / npm ----
+  node_modules/
+  npm-debug.log
+  yarn-debug.log*
+  yarn-error.log*
+  pnpm-debug.log*
+
+  # ---- Build artefacts (client & server) ----
+  client/node_modules/
+  server/node_modules/
+  client/dist/
+  server/dist/
+  client/build/
+  server/build/
+  client/.build/
+  server/.build/
+
+  # ---- Environment / secrets ----
+  .env
+  .env.local
+  .env.*          # any .env.* file (including .env.production)
+  .env.example    # keep a template, but don’t ship real values
+  .envrc          # (if you use Editorial style)
+
+  # ---- IDE / editor artefacts ----
+  .vscode/
+  .idea/
+  *.suo
+  *.ntvs*
+  *.njsproj
+  *.sln
+  *.user
+  *.code-workspace
+  *.swp
+  *.bak
+  *.tmp
+
+  # ---- OS / VCS ----
+  .DS_Store
+  Thumbs.db
+  ehthumbs.db
+  Desktop.ini
+  $RECYCLE.BIN/
+  .TemporaryItems/
+  Thumbs.db
+
+  # ---- Test artefacts ----
+  client/__tests__/
+  server/__tests__/
+  client/jest.config.js
+  server/jest.config.js
+  *.spec.js
+  *.spec.ts
+  *.test.js
+  *.test.ts
+
+  # ---- Git metadata (not needed in the image) ----
+  .git/
+  .gitignore
+  .gitmodules
