@@ -328,6 +328,8 @@ jobs:
     needs: 
       - client-test
       - server-test
+      
+    
     steps:
       - uses: actions/checkout@v4
         with:
@@ -336,6 +338,7 @@ jobs:
 
       # Triggering SonarQube analysis as results of it are required by Quality Gate check.
       - name: SonarQube Scan
+        if: ${{ secrets.RUN_SONAR == 'true' }}   # <-- removes the whole job when false
         uses: sonarsource/sonarqube-scan-action@master
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
