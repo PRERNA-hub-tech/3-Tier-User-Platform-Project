@@ -17,7 +17,7 @@ spec:
       - name: regcred
       containers:
       - name: nodejs-app
-        image: prernachourey3/nodejs-app:f2ac53fb18ebb0c72051d8a5f181e5aed3bf0eac
+        image: prernachourey3/nodejs-app:475095b918887169431d5cbb411cebc09072f8c7
         ports:
         - containerPort: 5000
         env:
